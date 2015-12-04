@@ -1,0 +1,27 @@
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/791060555/webpack-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/791060555/webpack-demo/issues"
+  },
+  "homepage": "https://github.com/791060555/webpack-demo#readme",
+  "devDependencies": {
+    "css-loader": "^0.23.0",
+    "gulp": "^3.9.0",
+    "gulp-util": "^3.0.7",
+    "style-loader": "^0.13.0",
+    "webpack": "^1.12.9",
+    "webpack-dev-server": "^1.14.0"
+  }
+}
