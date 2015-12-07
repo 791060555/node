@@ -10,7 +10,7 @@ var gulpLoadPlugins = require("gulp-load-plugins");
 const $ = gulpLoadPlugins();
 
 // The development server (the recommended option for development)
-gulp.task("default",() => {
+gulp.task("default",['clean'],() => {
 	gulp.start('init-resouces');
 });
 
@@ -54,14 +54,14 @@ gulp.task('images', () => {
 gulp.task('extras', () => {
   return gulp.src([
     'app/*.*',
-    '!app/*.html'
+    'app/*.html'
   ], {
     dot: true
-  }).pipe(gulp.dest('dist'));
+  }).pipe(gulp.dest('_dist'));
 });
 
 // Production build
-gulp.task("build", ["webpack:build"]);
+gulp.task("build", [ "clean","webpack:build","extras"]);
 
 gulp.task("webpack:build", function(callback) {
 	// modify some webpack config options

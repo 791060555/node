@@ -2,7 +2,7 @@ var path = require("path");
 var webpack = require("webpack");
 
 module.exports = {
- // context: __dirname,
+ // context: path.join(__dirname),
   entry: {
     index: './app/scripts/index.js',
   },
@@ -19,7 +19,7 @@ module.exports = {
       loader: 'url-loader?prefix=font/&limit=5000'
     }, 
      {
-       test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'
+       test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader', query: {compact: true} 
      } , 
     ]
   },
