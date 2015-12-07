@@ -25,6 +25,7 @@ gulp.task("build-dev", ["webpack:build-dev"], function() {
 	gulp.watch(["app/**/*"], ["webpack:build-dev"]);
 	gulp.watch('app/images/**/*',['images']);
 	gulp.watch('app/fonts/**/*', ['fonts']);
+	gulp.watch('app/*.html', ['html']);
 });
 
 gulp.task('fonts', () => {

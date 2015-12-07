@@ -44,11 +44,9 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(1);
-	var $ = __webpack_require__(5);
-	// require("./style.css");
-	document.write(__webpack_require__(6));
-	$("body").append($("div").val("不是的"));
+	__webpack_require__(1);var $=__webpack_require__(5); // require("./style.css");
+	// document.write(require("./content.js"));
+	$(function(){var page1=__webpack_require__(6);$('#content').html(page1);$('li').click(function(){var num=$(this).attr("data");var pageContent=__webpack_require__(7)("./page"+num+".html");$('#content').html(pageContent)})});
 
 /***/ },
 /* 1 */
@@ -85,7 +83,7 @@
 	
 	
 	// module
-	exports.push([module.id, "body{\r\n\tbackground: yellow;\r\n}", ""]);
+	exports.push([module.id, "html,body{\r\n\theight: 100%;\r\n\twidth: 100%;\r\n}\r\n#menu{\r\n\twidth: 200px;\r\n\theight: 300px;\r\n\tbackground-color: red;\r\n\tdisplay: inline-block;\r\n}\r\nul{\r\n\theight: 100%;\r\n}\r\nli{\r\n\theight: 30%;\r\n\ttext-align: center;\r\n\tlist-style: none;\r\n}\r\n#content{\r\n\twidth: 400px;\r\n\tdisplay: inline-block;\r\n\theight: 300px;\r\n\toverflow: hidden;\r\n}", ""]);
 	
 	// exports
 
@@ -1864,7 +1862,42 @@
 /* 6 */
 /***/ function(module, exports) {
 
-	module.exports = "测试文件加载士大夫";
+	module.exports = "<div>我是第一页</div>";
+
+/***/ },
+/* 7 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var map = {
+		"./page1.html": 6,
+		"./page2.html": 8,
+		"./page3.html": 9
+	};
+	function webpackContext(req) {
+		return __webpack_require__(webpackContextResolve(req));
+	};
+	function webpackContextResolve(req) {
+		return map[req] || (function() { throw new Error("Cannot find module '" + req + "'.") }());
+	};
+	webpackContext.keys = function webpackContextKeys() {
+		return Object.keys(map);
+	};
+	webpackContext.resolve = webpackContextResolve;
+	module.exports = webpackContext;
+	webpackContext.id = 7;
+
+
+/***/ },
+/* 8 */
+/***/ function(module, exports) {
+
+	module.exports = "<div>我是第二页</div>";
+
+/***/ },
+/* 9 */
+/***/ function(module, exports) {
+
+	module.exports = "<div>我是第三页</div>";
 
 /***/ }
 /******/ ]);
