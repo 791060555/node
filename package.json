@@ -17,9 +17,16 @@
   },
   "homepage": "https://github.com/791060555/webpack-demo#readme",
   "devDependencies": {
+    "bower": "^1.6.9",
     "css-loader": "^0.23.0",
+    "del": "^2.1.0",
     "gulp": "^3.9.0",
+    "gulp-cache": "^0.4.1",
+    "gulp-if": "^2.0.0",
+    "gulp-imagemin": "^2.4.0",
+    "gulp-load-plugins": "^1.1.0",
     "gulp-util": "^3.0.7",
+    "main-bower-files": "^2.9.0",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.9",
     "webpack-dev-server": "^1.14.0"
