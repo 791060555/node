@@ -44,9 +44,9 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(1);var $=__webpack_require__(2); // require("./style.css");
+	__webpack_require__(1);var $=__webpack_require__(5); // require("./style.css");
 	// document.write(require("./content.js"));
-	$(function(){var page1=__webpack_require__(3);$('#content').html(page1);$('li').click(function(){var num=$(this).attr("data");var pageContent=__webpack_require__(4)("./page"+num+".html");$('#content').html(pageContent)})});
+	$(function(){var page1=__webpack_require__(6);$('#content').html(page1);$('li').click(function(){var num=$(this).attr("data");var pageContent=__webpack_require__(7)("./page"+num+".html");$('#content').html(pageContent)})});
 
 /***/ },
 /* 1 */
@@ -55,7 +55,10 @@
 	// removed by extract-text-webpack-plugin
 
 /***/ },
-/* 2 */
+/* 2 */,
+/* 3 */,
+/* 4 */,
+/* 5 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -1515,19 +1518,19 @@
 	if(typeof noGlobal===strundefined){window.jQuery=window.$=jQuery}return jQuery});
 
 /***/ },
-/* 3 */
+/* 6 */
 /***/ function(module, exports) {
 
-	module.exports = "<script src=\"scripts/commons.js\" type=\"text/javascript\" charset=\"utf-8\"></script>\r\n<script src=\"scripts/page1-bundle.js\" type=\"text/javascript\" charset=\"utf-8\"></script>\r\n<div>我是第一页</div>";
+	module.exports = "module.exports = \"<script src=scripts/commons.js type=text/javascript charset=utf-8></script><script src=scripts/page1-bundle.js type=text/javascript charset=utf-8></script><div>我是第一页</div>\"";
 
 /***/ },
-/* 4 */
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var map = {
-		"./page1.html": 3,
-		"./page2.html": 5,
-		"./page3.html": 6
+		"./page1.html": 6,
+		"./page2.html": 8,
+		"./page3.html": 9
 	};
 	function webpackContext(req) {
 		return __webpack_require__(webpackContextResolve(req));
@@ -1540,20 +1543,20 @@
 	};
 	webpackContext.resolve = webpackContextResolve;
 	module.exports = webpackContext;
-	webpackContext.id = 4;
+	webpackContext.id = 7;
 
 
 /***/ },
-/* 5 */
+/* 8 */
 /***/ function(module, exports) {
 
-	module.exports = "<div>我是第二页</div>";
+	module.exports = "module.exports = \"<div>我是第二页</div>\"";
 
 /***/ },
-/* 6 */
+/* 9 */
 /***/ function(module, exports) {
 
-	module.exports = "<div>我是第三页</div>";
+	module.exports = "module.exports = \"<div>我是第三页</div>\"";
 
 /***/ }
 /******/ ]);

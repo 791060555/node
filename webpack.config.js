@@ -30,11 +30,11 @@ module.exports = {
      {
        test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader', query: {compact: true} 
      } , 
-     // {
-     //    test: /\.html$/,
-     //    name: "mandrillTemplates",
-     //    loader: 'raw!html-minify'
-     //  }
+     {
+        test: /\.html$/,
+        name: "mandrillTemplates",
+        loader: 'raw!html-minify'
+      }
     ]
   },
   'html-minify-loader': {
