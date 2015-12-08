@@ -1,17 +1,26 @@
 var path = require("path");
 var webpack = require("webpack");
+var ExtractTextPlugin = require("extract-text-webpack-plugin")
 
 module.exports = {
  // context: path.join(__dirname),
   entry: {
-    index: './app/scripts/index.js',
+    index: './app/scripts/index',
+    page1: './app/scripts/page1',
+    page2: './app/scripts/page2',
+    page3: './app/scripts/page3'
   },
   output: {
-    path: path.join(__dirname, '_dist', 'scripts'),
-    filename: '[name]-bundle.js',
+    path: path.join(__dirname, '_dist'),
+    filename: './scripts/[name]-bundle.js',
   },
   module: {
-    loaders: [{
+    loaders: [
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract("style-loader", "css-loader")
+      },
+    {
       test: /\.less$/,
       loader: 'style-loader!css-loader!less-loader'
     }, {
@@ -42,6 +51,12 @@ module.exports = {
     }
   },
   plugins: [
+    new webpack.optimize.CommonsChunkPlugin({
+        name: "commons",
+        filename: "./scripts/commons.js",
+        chunks: ["page1","page2","page3"]
+      }),
+    new ExtractTextPlugin("./styles/[name].css"),
     new webpack.ResolverPlugin(
       new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])
     )

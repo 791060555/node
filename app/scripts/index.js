@@ -1,4 +1,4 @@
-require("!style!css!../styles/style.css");
+require("../styles/style.css");
 var $ = require("jquery");
 // require("./style.css");
 // document.write(require("./content.js"));
