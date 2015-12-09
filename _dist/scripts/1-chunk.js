@@ -1,11 +1,12 @@
-webpackJsonp([3],{
+webpackJsonp([1],{
 
-/***/ 0:
+/***/ 10:
 /***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(11);
 	var $ = __webpack_require__(5);
-	$("content").append($('div').val("通知要加载页面三了"));
+	$("content").append($('div').val("通知要加载页面二了"));
+	module.exports = "我是第二页";
 
 /***/ },
 
@@ -17,4 +18,4 @@ webpackJsonp([3],{
 /***/ }
 
 });
-//# sourceMappingURL=page3-bundle.js.map
+//# sourceMappingURL=1-chunk.js.map

@@ -1,19 +1,21 @@
-webpackJsonp([1],{
+webpackJsonp([2],{
 
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(10);
+	__webpack_require__(13);
+	var $ = __webpack_require__(5);
+	$("content").append($('div').val("通知要加载页面一了"));
 
 /***/ },
 
-/***/ 10:
+/***/ 13:
 /***/ function(module, exports, __webpack_require__) {
 
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 	
 	// load the styles
-	var content = __webpack_require__(11);
+	var content = __webpack_require__(14);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
 	var update = __webpack_require__(4)(content, {});
@@ -34,7 +36,7 @@ webpackJsonp([1],{
 
 /***/ },
 
-/***/ 11:
+/***/ 14:
 /***/ function(module, exports, __webpack_require__) {
 
 	exports = module.exports = __webpack_require__(3)();
@@ -42,7 +44,7 @@ webpackJsonp([1],{
 	
 	
 	// module
-	exports.push([module.id, "body{\r\n\tfont-size:20px;\r\n}\r\n\r\nbody{\r\n\tcolor:red;\r\n}", ""]);
+	exports.push([module.id, "body{\r\n\tfont-size:20px;\r\n}\r\n\r\nbody{\r\n\tcolor:black;\r\n}", ""]);
 	
 	// exports
 
