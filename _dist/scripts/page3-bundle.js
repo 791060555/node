@@ -1,15 +1,16 @@
-webpackJsonp([3],{
+var appConfig =
+webpackJsonpappConfig([4],{
 
 /***/ 0:
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(11);
-	var $ = __webpack_require__(5);
-	$("content").append($('div').val("通知要加载页面三了"));
+	__webpack_require__(13);
+	var $ = __webpack_require__(2);
+	$("#content").append("<div>通知要加载页面三了</div>");
 
 /***/ },
 
-/***/ 11:
+/***/ 13:
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin

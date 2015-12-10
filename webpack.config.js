@@ -12,7 +12,8 @@ module.exports = {
   output: {
     path: path.join(__dirname, '_dist'),
     filename: './scripts/[name]-bundle.js',
-    chunkFilename: "./scripts/[id]-chunk.js"
+    chunkFilename: "./scripts/[id]-chunk.js",
+   // library:'appConfig'  //主要应用jsonp命名重新定义
   },
   module: {
     loaders: [{

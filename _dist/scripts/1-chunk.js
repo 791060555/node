@@ -1,19 +1,18 @@
-webpackJsonp([1],{
+webpackJsonpappConfig([1],{
 
 /***/ 10:
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	__webpack_require__(11);
-	var $ = __webpack_require__(5);
-	$("content").append($('div').val("通知要加载页面二了"));
-	module.exports = "我是第二页";
+	console.log("加载c测试require");
+	module.exports = "require导入";
 
 /***/ },
 
 /***/ 11:
 /***/ function(module, exports) {
 
-	// removed by extract-text-webpack-plugin
+	console.log("加载d测试require");
+	module.exports = "require导入";
 
 /***/ }
 
